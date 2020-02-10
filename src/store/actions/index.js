@@ -1,0 +1,1 @@
+export { getTemperatures } from './temperatures';

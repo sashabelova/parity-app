@@ -1,0 +1,83 @@
+@import 'fonts.scss';
+@import 'colors.scss';
+
+// Font size
+@function calculate-rem($size) {
+  $rem-size: $size / 16;
+  @return $rem-size * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: calculate-rem($size);
+}
+
+@mixin ph($font-name, $font-size, $font-color) {
+  &::-webkit-input-placeholder {
+    font-family: $font-name, sans-serif;
+    font-size: $font-size;
+    color: $font-color;
+    @content;
+  }
+  &::-moz-placeholder {
+    font-family: $font-name, sans-serif;
+    font-size: $font-size;
+    color: $font-color;
+    @content;
+  }
+  &:-moz-placeholder {
+    font-family: $font-name, sans-serif;
+    font-size: $font-size;
+    color: $font-color;
+    @content;
+  }
+  &::placeholder {
+    font-family: $font-name, sans-serif;
+    font-size: $font-size;
+    color: $font-color;
+    @content;
+  }
+  &:placeholder {
+    font-family: $font-name, sans-serif;
+    font-size: $font-size;
+    color: $font-color;
+    @content;
+  }
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow: inset $top $left $blur $color;
+    -moz-box-shadow: inset $top $left $blur $color;
+    box-shadow: inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+// ----- Media queries
+$desktop: 1440px;
+$laptop: 1140px;
+$tablet: 768px;
+$mobile: 320px;
+
+@mixin bp($size) {
+  @if $size==desktop {
+    @media screen and (min-width: $desktop) {
+      @content;
+    }
+  } @else if $size==laptop {
+    @media screen and (max-width: $laptop) {
+      @content;
+    }
+  } @else if $size==tablet {
+    @media screen and (max-width: $tablet) {
+      @content;
+    }
+  } @else if $size==mobile {
+    @media screen and (max-width: $mobile) {
+      @content;
+    }
+  }
+}

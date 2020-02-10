@@ -1,0 +1,26 @@
+{
+  "short_name": "Thermostat app",
+  "name": "Thermostat app",
+  "description": "Thermostat app for managing temperature",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "96x96 32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "favicon-96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "favicon-32x32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

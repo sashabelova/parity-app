@@ -1,0 +1,21 @@
+header {
+  background: $c_bg;
+  background-size: 50px;
+  height: 70px;
+  line-height: 70px;
+  padding-left: 30px;
+  border-bottom: 1px solid $c_main_border;
+  @include box-shadow(0, 2px, 5px, rgba($c_lightgray, 0.7));
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  h1 {
+    @include font-size(28);
+    @include f_400;
+    color: $c_f_header;
+    @include bp(tablet) {
+      @include font-size(20);
+    }
+  }
+}
