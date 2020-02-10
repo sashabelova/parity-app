@@ -8,7 +8,7 @@ This app was tested with npm version `6.10.2` and nodejs version `12.9.0`
 
 In the project directory run for installation:
 
-`npm ci`
+`npm install`
 
 Then for running:
 
